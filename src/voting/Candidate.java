@@ -13,6 +13,15 @@ public class Candidate {
 	private String party;
 	private int votes;
 
+	public static void main(String[] args) {
+		Candidate candidate1 = new Candidate("Indira Patel", "Demopublican", 35400);
+		System.out.println(candidate1.getName() + ": " + candidate1.getVotes());
+		Candidate candidate2= new Candidate("Mouse girl", "Mouse team", 31000);
+		System.out.println(candidate2.getName() + ": " + candidate2.getVotes());
+		Candidate candidate3= new Candidate("Monkey boy", "Monkey team", 43000);
+		System.out.println(candidate3.getName() + ": " + candidate3.getVotes());
+
+	}
 	/**
 	 * Construct a new candidate with the specified name, party and number of
 	 * votes.
@@ -25,7 +34,7 @@ public class Candidate {
 	 *            the number of votes that this candidate has.
 	 */
 	public Candidate(String candidateName, String candidateParty, int candidateVotes) {
-		name = candidateName;
+		this.name = candidateName;
 		party = candidateParty;
 		votes = candidateVotes;
 	}
@@ -36,7 +45,7 @@ public class Candidate {
 	 * @return the candidate's name.
 	 */
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	/**
@@ -45,7 +54,7 @@ public class Candidate {
 	 * @return the candidate's party.
 	 */
 	public String getParty() {
-		return party;
+		return this.party;
 	}
 
 	/**
@@ -54,7 +63,7 @@ public class Candidate {
 	 * @return this candidate's votes.
 	 */
 	public int getVotes() {
-		return votes;
+		return this.votes;
 	}
 
 	/**
